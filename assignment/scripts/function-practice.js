@@ -117,29 +117,57 @@ console.log(notFound);
 //    string. Return true if it is, and false otherwise
 
 const string = "astrology";
-const letter1= "a";
+const letter1 = "a";
 const isFirst1 = isFirstLetter(letter1, string);
 
 function isFirstLetter(letter, string) {
-
+return string.charAt(0) === letter;
 }
-console.log('isFirstLetter', isFirstLetter, 'a');
+console.log('isFirstLetter', isFirst1, 'a');
 
+const letter2 = "s";
+const isFirst2 = isFirstLetter(letter2, string);
+console.log('isFirstLetter', isFirst2, 's');
+
+//This one was a little confusing for me to get the syntax correct
+// without it constantly wanting to log true for the first letter each time
 
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
-  // TODO: loop to add items
-  return sum;
-}
+// TODO: loop to add items
+
+console.log('Function to return sum of all numbers');
+
+const nextArray = [2, 4, 6, 8, 10];
+const totalSum = sumAll(nextArray);
+
+function sumAll(nextArray) {
+  let sum = 0;
+  for(let i = 0; i < nextArray.length; i++){
+  sum += nextArray[i];}
+  return sum;}
+  
+  console.log(totalSum);
+//Discovered that if I didn't have the } at end of line 149, JS still tries
+// to do something, gave a return of '2', which was corrected when
+// closing line 149 with } and the same for 150.
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+const posNumbers = [-7, -3, 4, 8, 9];
+const positiveNumbers = getPositiveNumbers(posNumbers);
+
+function getPositiveNumbers(posNumbers){
+for (let i = 0; i < posNumbers.length; i++){
+if(posNumbers[i]>0){
+posNumbers.push(posNumbers[i]);}
+return posNumbers;}}
+
+console.log(positiveNumbers);
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
