@@ -65,26 +65,67 @@ if( number > 0 )
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+console.log('Function to return last item in array');
 
-function getLast( array ) {
+let array = [1,2,3,4,5];
 
-}
+function getLast(array) {
+if(array.length === 0){
+return undefined;}
+else { return array[array.length-1];}}
+
+lastItem = getLast(array);
+console.log(lastItem);
+
+let emptyArray = [];
+
+function getLast(emptyArray){
+if(emptyArray.length ===0){
+return undefined;}
+else { return [emptyArray.length -1];}}
+
+lastItememptyArray = getLast(emptyArray);
+console.log(lastItememptyArray);
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
-}
+console.log('Find a value in an array');
+
+const thisArray = [1,2,3,4,5];
+const thisValue = 2;
+
+function find( thisArray, thisValue ){
+for (let i = 0; i < thisArray.length; i++){
+if (thisArray[i] === thisValue){
+return true; }
+return false; }}
+
+const found = find(thisArray, thisValue);
+console.log(found);
+//still getting a false return for calling 'found', when thisValue = 2
+const notFound = find(thisArray, 7);
+console.log(notFound);
+
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+
+const string = "astrology";
+const letter1= "a";
+const isFirst1 = isFirstLetter(letter1, string);
+
 function isFirstLetter(letter, string) {
 
 }
+console.log('isFirstLetter', isFirstLetter, 'a');
+
+
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
